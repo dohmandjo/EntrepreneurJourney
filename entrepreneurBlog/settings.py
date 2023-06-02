@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z@jk$ekab!_5x(spp*9@tea=e**p!#6spk7k4!(-zps#0gap35'
+SECRET_KEY = 'django-insecure-fxg8s@8s-^n(wdi21_x1$g$v_62dxy5p@+sf1%g$!nt13b!m(^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'entrepreneurBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["entrepreneurBlog/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +122,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]

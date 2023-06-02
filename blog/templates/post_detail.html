@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+    <h2>Comments</h2>
+    <ul class="list-group">
+      {% for comment in comments %}
+        <li class="list-group-item">
+          <strong>{{ comment.author }}</strong>
+          <p>{{ comment.body }}</p>
+        </li>
+      {% empty %}
+        <li class="list-group-item">No comments yet.</li>
+      {% endfor %}
+    </ul>
+    <h2>Add Comment</h2>
+    <form method="POST" action="{% url 'add_comment' post.pk %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+{% endblock %}
