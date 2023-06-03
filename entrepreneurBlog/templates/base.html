@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EntrepreneurJourney</title>
+  <title>Blog</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'post_list' %}">Blog</a>
+      <a class="navbar-brand" href="{% url 'post_list' %}">EntrepreneurJourney</a>
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
           <li class="nav-item">

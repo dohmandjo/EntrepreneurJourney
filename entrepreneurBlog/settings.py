@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog' # define the blog app to the project
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'entrepreneurBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["entrepreneurBlog/templates/"],
+        'DIRS': ["entrepreneurBlog/templates/"], # add the base template
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
